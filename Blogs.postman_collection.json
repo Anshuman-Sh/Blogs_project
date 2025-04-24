@@ -1,0 +1,428 @@
+{
+	"info": {
+		"_postman_id": "00550a76-a5bb-4972-b1ce-1ba0cf1bff83",
+		"name": "Blogs",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "30968365"
+	},
+	"item": [
+		{
+			"name": "admin",
+			"item": [
+				{
+					"name": "Login",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\": \"admin@gmail.com\",\r\n    \"password\": \"Admin@123456\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8000/admin/login",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"admin",
+								"login"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Change password",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY3ZmY4ZWIzYzEwMGM5NGQyNDI4NjllYSIsImV4cCI6MTc0NzM5MzQ1OSwidHlwZSI6ImFjY2VzcyIsInJvbGUiOiJhZG1pbiIsImlhdCI6MTc0NDgwMTQ1OX0.qqladb6j1IKB8uu-Ut3SVnpFsa4ZEaaZRVbD7f6pjq4",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"oldPassword\": \"Admin@123456\",\r\n    \"newPassword\": \"Admin@123456\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8000/admin/changePassword",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"admin",
+								"changePassword"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Logout",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY3ZmY4ZWIzYzEwMGM5NGQyNDI4NjllYSIsImV4cCI6MTc0NzM5MzQ1OSwidHlwZSI6ImFjY2VzcyIsInJvbGUiOiJhZG1pbiIsImlhdCI6MTc0NDgwMTQ1OX0.qqladb6j1IKB8uu-Ut3SVnpFsa4ZEaaZRVbD7f6pjq4",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8000/admin/logout",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"admin",
+								"logout"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "user",
+			"item": [
+				{
+					"name": "Signup",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"firstName\": \"Anshuman\",\r\n    \"lastName\": \"Sharma\",\r\n    \"email\": \"anshuman@gmail.com\",\r\n    \"password\": \"123456\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8000/user/signup",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"user",
+								"signup"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Login",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\": \"anshumansharma@gmail.com\",\r\n    \"password\": \"12345678\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8000/user/login",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"user",
+								"login"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Logout",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY3ZmY3Y2NlOTNjZjY5NTliMDFjOGI3ZiIsImV4cCI6MTc0NzM4ODg3OCwidHlwZSI6ImFjY2VzcyIsInJvbGUiOiJ1c2VyIiwiaWF0IjoxNzQ0Nzk2ODc4fQ.sasG4JEFhfGfv78CysVjubCdDci3dXk7yY8Ti8VMshg",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8000/user/logout",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"user",
+								"logout"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Edit profile",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY3ZmY3Y2NlOTNjZjY5NTliMDFjOGI3ZiIsImV4cCI6MTc0NzM4ODg3OCwidHlwZSI6ImFjY2VzcyIsInJvbGUiOiJ1c2VyIiwiaWF0IjoxNzQ0Nzk2ODc4fQ.sasG4JEFhfGfv78CysVjubCdDci3dXk7yY8Ti8VMshg",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"firstName\": \"Anshuman\",\r\n    \"lastName\": \"Sharma\",\r\n    \"email\": \"anshumansharma@gmail.com\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8000/user/editProfile",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"user",
+								"editProfile"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "blog",
+			"item": [
+				{
+					"name": "Create blog",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY3ZmY4NmMyZjk3MmY2MWZmMTUyOTJkMiIsImV4cCI6MTc0NzM5MTQyNiwidHlwZSI6ImFjY2VzcyIsInJvbGUiOiJ1c2VyIiwiaWF0IjoxNzQ0Nzk5NDI2fQ.PcvshCUIWxnob9UCxZdiBbRzZmQP9SiEvF4x3WyD3x4",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"title\": \"Title 4\", \r\n    \"description\": \"Description 4\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8000/blogs",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"blogs"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Edit blogs",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY3ZmY4NmMyZjk3MmY2MWZmMTUyOTJkMiIsImV4cCI6MTc0NzM5MTQyNiwidHlwZSI6ImFjY2VzcyIsInJvbGUiOiJ1c2VyIiwiaWF0IjoxNzQ0Nzk5NDI2fQ.PcvshCUIWxnob9UCxZdiBbRzZmQP9SiEvF4x3WyD3x4",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"title\": \"New Title 4\",\r\n    \"description\": \"Description change success.\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8000/blogs/680a45e748af7d0a8a516bc7",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"blogs",
+								"680a45e748af7d0a8a516bc7"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete blog",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY3ZmY4NmMyZjk3MmY2MWZmMTUyOTJkMiIsImV4cCI6MTc0NzM5MTQyNiwidHlwZSI6ImFjY2VzcyIsInJvbGUiOiJ1c2VyIiwiaWF0IjoxNzQ0Nzk5NDI2fQ.PcvshCUIWxnob9UCxZdiBbRzZmQP9SiEvF4x3WyD3x4",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8000/blogs/680a45e748af7d0a8a516bc7",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"blogs",
+								"680a45e748af7d0a8a516bc7"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "All blogs",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY3ZmY4NmMyZjk3MmY2MWZmMTUyOTJkMiIsImV4cCI6MTc0NzM5MTQyNiwidHlwZSI6ImFjY2VzcyIsInJvbGUiOiJ1c2VyIiwiaWF0IjoxNzQ0Nzk5NDI2fQ.PcvshCUIWxnob9UCxZdiBbRzZmQP9SiEvF4x3WyD3x4",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8000/blogs",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"blogs"
+							],
+							"query": [
+								{
+									"key": "page",
+									"value": "0",
+									"disabled": true
+								},
+								{
+									"key": "limit",
+									"value": "1",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "A blog",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY3ZmY4NmMyZjk3MmY2MWZmMTUyOTJkMiIsImV4cCI6MTc0NzM5MTQyNiwidHlwZSI6ImFjY2VzcyIsInJvbGUiOiJ1c2VyIiwiaWF0IjoxNzQ0Nzk5NDI2fQ.PcvshCUIWxnob9UCxZdiBbRzZmQP9SiEvF4x3WyD3x4",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8000/blogs/680a45e748af7d0a8a516bc7",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"blogs",
+								"680a45e748af7d0a8a516bc7"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
